@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<title>Check</title>
+	<link rel="stylesheet" href="{% static 'eventreg/css/main.css' %}" type="text/css"/>
+</head>
+<body>
+<div style="color:#dcdcdc;width:98%;text-align:right;font-style:italic;padding: 10px 0px;">
+	<a href="/">Go Home</a>
+</div>
+<h1 class="heading">Coordinators Panel</h1>
+<div class="check_box">
+<form method='POST' id='check_form' action="/events/result/">
+	{% csrf_token %}
+    <input class="input_box" type="text" name="uid" value="" autocomplete="off" placeholder="Register ID" required />
+    <input class="check_btn" type='submit' value='Check'/>
+</form>
+</div>
+</body>
+</html>
+
+
+

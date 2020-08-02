@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<title>Result</title>
+	<link rel="stylesheet" href="{% static 'eventreg/css/main.css' %}" type="text/css"/>
+</head>
+<body>
+<div style="color:#dcdcdc;width:98%;text-align:right;font-style:italic;padding: 10px 0px;">
+	<a href="/">Go Home</a>
+</div>
+<h1 class="heading">Results Panel</h1>
+<div class="result_box">
+	<h2>{{name}}</h2>
+	<h2>{{email}}</h2>
+	<h2>{{number}}</h2>
+	<h2> Events : </h2>
+	{% for event in events %}
+	<h2>{{event}}</h2>
+	{% endfor %}
+	<h2>{{error}}</h2>
+</div>
+<div><a href="/events/check"><button class="choice_btn">Check New</button></a></div>
+</body>
+</html>
+
+
+
