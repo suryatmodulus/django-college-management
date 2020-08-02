@@ -1,3 +1,7 @@
+## Requirments
+
+* Python 3.7.7+
+
 ## How to Run on Windows: 
 
 * navigate to the folder in command line        
